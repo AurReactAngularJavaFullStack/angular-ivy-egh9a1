@@ -6,16 +6,4 @@ import { of, from } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-
-  ngOnInit() {
-    of(2, 4, 6, 8).subscribe((item) => console.log(item));
-
-    from([20, 15, 10, 5]).subscribe({
-      next: (item) => console.log(`resulting item .. ${item}`),
-      error: (err) => console.error(`error occurred .. ${err}`),
-      complete: () => console.error('complete'),
-    });
-  }
-}
+export class AppComponent {}
